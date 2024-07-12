@@ -81,27 +81,60 @@
 
 html,
 body {
+  height: 100vh;
+  width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.resource-form {
+  margin-top: 1em;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.active-resource {
+  background-color: #3140aa;
+  padding: 1em;
+  text-align: center;
+  color: #fafafa;
+  height: max-content;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.active-resource .resource-name {
+  font-size: 30px;
+  height: max-content;
+}
+.active-resource .elapsed-time {
+  font-size: 64px;
+  font-weight: bold;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .25em;
+}
+
+.tag {
+  
+  font-weight: normal !important;
+}
+
+.tag.resource-active {
+  background-color: #2d8bff;
+  color: #fafafa;
+}
+
+.tag.resource-inactive {
+  background-color: orangered;
+  color: #fafafa;
+}
+.tag.resource-complete {
+  background-color: #2dde2d;
+  color: #fafafa;
+}
+
+
+.content {
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
